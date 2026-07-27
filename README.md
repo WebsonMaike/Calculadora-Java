@@ -1,41 +1,31 @@
-import java.util.Scanner;
+# Calculadora Java (Console)
 
-public class Main{
-public static void main(String[] args){
+Calculadora simples feita em Java para praticar lógica de programação,
+estruturas de repetição e tratamento de erros.
 
-    Scanner scanner = new Scanner (System.in);
+## Funcionalidades
 
-    double v1, v2, resultado;
-    int soma;
+- Operações básicas: soma, subtração, multiplicação e divisão
+- Loop de continuação usando `do-while` (permite repetir o cálculo)
+- Modo acumulativo: o resultado de uma operação vira a base para a próxima
+- Tratamento de erro para divisão por zero
+- Validação de opção inválida no menu
 
-    System.out.println("Digite o Primeiro valor: ");
-    v1  = scanner.nextDouble();
-        System.out.println("Digite o Segundo valor: ");
-        v2 = scanner.nextDouble();
-        System.out.println("Qual o operador ?");
-        System.out.println("1-soma");
-        System.out.println("2-Subtracao");
-        System.out.println("3-Multiplicacao");
-        System.out.println("4-Divisao");
-        soma = scanner.nextInt();
+## Como rodar
 
-        switch (soma){
-            case 1:
-                resultado = v1+v2;
-                System.out.println(resultado);
-                break;
-            case 2:
-                resultado = v1-v2;
-                System.out.println(resultado);
-                break;
-            case 3:
-                resultado = v1*v2;
-                System.out.println(resultado);
-                break;
-            case 4:
-                resultado = v1/v2;
-                System.out.println(resultado);
-                break;
-        }
-    }
-}
+```bash
+javac src/Main.java
+java -cp src Main
+```
+
+## O que aprendi
+
+- Diferença entre `while` e `do-while` e quando usar cada um
+- Uso de `switch` com `break` para evitar fall-through
+- Manutenção de estado entre iterações de um loop (variável `resultado`)
+- Boas práticas de organização de repositório Git/GitHub
+
+## Próximos passos
+
+- Adicionar opção de reiniciar o cálculo
+- Migrar para versão com interface gráfica (JavaFX) ou API REST (Spring Boot)
